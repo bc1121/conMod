@@ -1,12 +1,12 @@
 Define LibPub conmod(intset,modulon)=
 Prgm
-:© conMod - Conguence Modulo N
+:© conMod - Congruence Modulo N
 :© v1.0 - "10/1/2023" - Brent Carter
-:©receive a set of integers as a list, and an int as moduloN
-:© origintset only necessary to preserve order of orig to to match textbook answers
+:© receive a set of integers as a list, and an int as moduloN
+:© origintset only necessary to preserve order of original int set to to match textbook answers
 :Local origintset
 :origintset:=intset
-:©create new var for list of cooresponding mod n values of intset values
+:© create new list of matching size for corresponding mod n values of intset list
 :Local computedmodlist
 :Local i
 :For i,1,dim(intset)
@@ -14,7 +14,7 @@ Prgm
 :EndFor
 :SortA computedmodlist,intset
 :
-:©Create shortmodlist = computedmodlist: no dups
+:© Create shortmodlist = computedmodlist minus duplicates
 :Local shortmodlist
 :Local countmod
 :countmod:=1
@@ -26,7 +26,7 @@ Prgm
 :  EndIf
 :EndFor
 :
-:©Print results
+:© Print results
 :For i,1,dim(shortmodlist)
 :  Disp "Congruent to",shortmodlist[i],"modulo",modulon,":"
 :  Local tempset
